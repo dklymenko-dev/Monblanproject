@@ -23,7 +23,7 @@
 
                         <div class="post__likes">
                             <img
-                                src="/images/heart-icon.svg"
+                                src="./images/heart-icon.svg"
                                 alt="like"
                             >
 
@@ -34,7 +34,7 @@
 
                         <div class="post__comments">
                             <img
-                                src="/images/message-icon.svg"
+                                src="./images/message-icon.svg"
                                 alt="comment"
                             >
 
@@ -57,7 +57,7 @@
 
                         <div class="post__likes">
                             <img
-                                src="/images/heart-icon.svg"
+                                src="./images/heart-icon.svg"
                                 alt="like"
                             >
 
@@ -68,7 +68,7 @@
 
                         <div class="post__comments">
                             <img
-                                src="/images/message-icon.svg"
+                                src="./images/message-icon.svg"
                                 alt="comment"
                             >
 
