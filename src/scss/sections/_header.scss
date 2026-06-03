@@ -1,0 +1,127 @@
+@use '../base/_variables' as variables;
+
+.header {
+  background: rgba(255, 255, 255, .67);
+  box-shadow: variables.$shadow-header;
+
+  &__container {
+    display: flex;
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+
+    &--text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &--description {
+      border: 1px solid variables.$color-primary;
+      border-radius: 2px;
+      color: variables.$color-primary;
+      font-size: 13px;
+      padding: 6px 9px;
+      line-height: 1;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    font-size: 14px;
+    gap: 16px;
+  }
+
+  &__date {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+
+    &--field {
+      display: flex;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &-clear {
+        cursor: pointer;
+      }
+
+      &-clear,
+      &-calendar {
+        background-color: variables.$color-button-bg;
+        border: 1px solid variables.$color-input-border;
+        margin-left: -1px;
+      }
+
+      &-calendar {
+        padding: 0 4px;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+@media(max-width: 767px) {
+  .header {
+    &__container {
+      align-items: center;
+      flex-direction: column;
+      padding: 12px;
+    }
+
+    &__logo {
+      max-width: 95px;
+    }
+
+    &__date {
+      flex-direction: column;
+    }
+  }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+@media(min-width: 768px) {
+  .header {
+    &__container {
+      justify-content: center;
+    }
+
+    &__date {
+      align-items: center;
+    }
+  }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+@media(min-width: 1024px) {
+  .header {
+    padding-bottom: 28px;
+    padding-top: 6px;
+
+    &__container {
+      gap: 86px;
+      padding-right: 123px;
+    }
+
+    &__content {
+      padding-top: 11px;
+    }
+  }
+}

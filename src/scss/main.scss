@@ -1,0 +1,87 @@
+@use 'base/variables' as variables;
+
+@use 'components/datepicker';
+
+@use 'sections/header';
+@use 'sections/posts';
+
+body {
+  background: #fafafa url('../../public/images/header-bg.svg') no-repeat;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  position: relative;
+
+  &:after {
+    background: url('../../public/images/bottom-bg.svg') no-repeat center;
+    background-size: contain;
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    width: 210px;
+    height: 367px;
+    z-index: -1;
+  }
+}
+
+.container {
+  max-width: 836px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text {
+  &__semibold {
+    font-weight: 500;
+  }
+
+  &__bold {
+    font-weight: 700;
+  }
+
+  &__small {
+    font-size: 14px;
+  }
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+
+  .load-more {
+    background: transparent;
+    border: 1px solid #000000;
+    border-radius: 14px;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 7px 22px;
+    text-transform: uppercase;
+
+    &:disabled {
+      color: variables.$color-button-disabled;
+      border-color: variables.$color-button-disabled;
+    }
+  }
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+@media(max-width: 767px) {
+  .container {
+    padding: 12px;
+  }
+}
+
+//
+//  Tablet
+//  _____________________________________________
+
+@media(min-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,136 @@
+@use '../base/_variables' as variables;
+
+.header__date--field {
+  .flatpickr-input {
+    border: 1px solid variables.$color-input-border;
+    height: 26px;
+    border-radius: 4px 0 0 4px;
+    padding-left: 7px;
+    width: 98px;
+
+    &::placeholder {
+      color: variables.$color-input-placeholder;
+    }
+  }
+}
+
+body {
+  .flatpickr-calendar {
+    border: 1px solid variables.$color-calendar-border;
+    box-shadow: variables.$shadow-calendar;
+
+    &.open {
+      width: 201px;
+      height: 215px;
+
+      .flatpickr-months {
+        .flatpickr-month {
+          .flatpickr-current-month {
+            font-size: 14px;
+
+            .flatpickr-monthDropdown-months {
+              appearance: none;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              font-weight: 700;
+            }
+
+            .numInputWrapper {
+              .cur-year {
+                font-weight: 700;
+                padding-left: 0;
+              }
+            }
+          }
+        }
+
+        .flatpickr-prev-month,
+        .flatpickr-next-month {
+          height: 10px;
+          padding: 14px;
+
+          svg {
+            display: none;
+          }
+        }
+
+        .flatpickr-prev-month {
+          &:after {
+            background-image: url('../../../public/images/arrows.svg');
+            background-repeat: no-repeat;
+            content: '';
+            display: block;
+            height: 12px;
+            width: 12px;
+          }
+        }
+
+        .flatpickr-next-month {
+          &:before {
+            background-image: url('../../../public/images/arrows.svg');
+            background-repeat: no-repeat;
+            content: '';
+            display: block;
+            height: 12px;
+            transform: rotate(180deg) translateY(5px);
+            width: 12px;
+          }
+        }
+      }
+
+      .flatpickr-innerContainer {
+        justify-content: center;
+
+        .flatpickr-weekdays {
+          .flatpickr-weekday {
+            font-size: 13px;
+            font-weight: 700;
+            color: #000000;
+          }
+        }
+      }
+
+      .flatpickr-days {
+        width: calc(26px * 7);
+        min-width: calc(26px * 7);
+
+        .dayContainer {
+          width: calc(26px * 7);
+          min-width: calc(26px * 7);
+
+          .flatpickr-day {
+            color: #333437;
+            margin: 1px;
+            max-width: 23px;
+            height: 23px;
+            line-height: 23px;
+
+            &.is-sunday {
+              background-color: #F4F4F4;
+              border-radius: 2px;
+            }
+
+            &.prevMonthDay,
+            &.nextMonthDay {
+              color: #929292;
+            }
+
+            &.today {
+              border-radius: 2px;
+            }
+
+            &:hover {
+              border-radius: 2px;
+            }
+
+            &.selected {
+              background: variables.$color-primary;
+              border-color: variables.$color-primary;
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
